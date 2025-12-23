@@ -6,35 +6,15 @@
 
 Git уже предустановлен в составе пакета Git for Windows.
 
-### macOS
-Установите Git одним из способов:
-
-Через терминал
-
-С помощью менеджера пакетов Homebrew:
-
-bash
-brew install git
-Linux
-Используйте терминал и выберите команду для вашего дистрибутива:
-
-Ubuntu/Debian: sudo apt install git
-
-Fedora: sudo dnf install git
-
-CentOS: sudo yum install git
-
 ## Проверка установки
 
 После установки проверьте версию Git:
-bash
 git version
 
 ### Настройка Git
 
 Глобальная конфигурация
 Настройте имя пользователя и email (данные запишутся в файл ~/.gitconfig):
-bash
 git config --global user.name "Ваше Имя"
 git config --global user.email "ваш.email@example.com"
 
@@ -42,7 +22,6 @@ git config --global user.email "ваш.email@example.com"
 
 Просмотрите все текущие настройки:
 
-bash
 git config --list
 
 ## Базовые команды терминала
@@ -77,8 +56,8 @@ git config --list
 ## Работа с Git
 
 Инициализация репозитория
-bash
 git init
+
 * Отслеживание изменений bash
 * Проверить статус git status
 * Добавить все файлы git add --all Или git add .
@@ -86,12 +65,10 @@ git init
 
 ## Создание коммита
 
-bash
 git commit -m "Описание изменений"
 
 ## Просмотр истории
 
-bash
 git log
 
 ## Работа с GitHub
@@ -122,18 +99,9 @@ ssh-keygen -t ed25519 -C "ваш.email@example.com"
 
 ### Копирование публичного ключа
 
-macOS:
+##### Windows:
 
-bash
-pbcopy < ~/.ssh/id_ed25519.pub
-Windows:
-
-bash
 clip < ~/.ssh/id_ed25519.pub
-Linux:
-
-bash
-cat ~/.ssh/id_ed25519.pub
 
 ### Добавление ключа на GitHub
 
@@ -147,15 +115,14 @@ cat ~/.ssh/id_ed25519.pub
 
 ### Проверка подключения
 
-bash
 ssh -T git@github.com
 
 ### Связывание локального и удалённого репозиториев
+
 Добавление удалённого репозитория
-bash
+
 git remote add origin git@github.com:username/repository.git
 
 ### Проверка подключения
 
-bash
 git remote -v
